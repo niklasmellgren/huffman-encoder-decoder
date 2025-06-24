@@ -41,6 +41,20 @@ python Encode.py inputfile.txt outputfile.huf
 python Decode.py outputfile.huf decodedfile.txt
 ```
 
+### Example
+
+You can try the tool using the included sample file `testfiles/dolphinsunset.jpg`:
+
+```bash
+# Compress the file
+python Encode.py testfiles/dolphinsunset.jpg testfiles/dolphinsunset.huf
+```
+
+```bash
+# Decompress it
+python Decode.py testfiles/dolphinsunset.huf testfiles/dolphinsunset_decoded.jpg
+```
+
 All files must be opened in **binary mode**, and the encoded file will contain:
 1. 256 integers (32-bit each) representing byte frequencies.
 2. The bit-encoded body of the original file.
