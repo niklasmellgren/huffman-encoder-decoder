@@ -49,9 +49,8 @@ All files must be opened in **binary mode**, and the encoded file will contain:
 
 - Works on all file types: `.txt`, `.jpg`, `.pdf`, etc.
 - Optimized for clarity, modularity, and correct handling of corner cases (e.g., empty files or single-byte files).
-- This project was built as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
 
 ## Acknowledgments
-
+This project was built as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
 - `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are included without modification.
 - The remaining files and implementation were written by me (Niklas Mellgren) as part of the final project.
