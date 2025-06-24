@@ -1,6 +1,6 @@
 # Huffman File Compressor in Python
 
-This repository contains a custom implementation of **Huffman coding** to compress and decompress binary files. Built as a part of the DS814: Algorithms and Data Structures course on SDU, the project demonstrates bit-level I/O handling, priority queues, and tree-based encoding for efficient lossless data compression.
+This repository contains a custom implementation of **Huffman coding** to compress and decompress binary files. The project demonstrates bit-level I/O handling, priority queues, and tree-based encoding for efficient lossless data compression.
 
 ## Overview
 
@@ -49,4 +49,4 @@ All files must be opened in **binary mode**, and the encoded file will contain:
 
 - Works on all file types: `.txt`, `.jpg`, `.pdf`, etc.
 - Optimized for clarity, modularity, and correct handling of corner cases (e.g., empty files or single-byte files).
-- Based on course project Part III from *DM507/DS814: Algorithms and Data Structures* at the University of Southern Denmark.
+- Based on course project from *DM507/DS814: Algorithms and Data Structures* at the University of Southern Denmark.
