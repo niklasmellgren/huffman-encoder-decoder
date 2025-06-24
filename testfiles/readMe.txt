@@ -1,4 +1,4 @@
-De korrekte forandringer af størrelser ved brug af Encode:
+The correct size changes when using Encode:
 
 KingJamesBible.txt: 4948914 bytes -> 2771852 bytes
 ScardoviaWiggsiae.dna: 1576664 bytes -> 446970 bytes
