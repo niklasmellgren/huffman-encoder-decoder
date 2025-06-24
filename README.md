@@ -66,5 +66,5 @@ All files must be opened in **binary mode**, and the encoded file will contain:
 
 ## Acknowledgments
 This project was built as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
-- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are included without modification.
+- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are included without modifications.
 - The remaining files and implementation were written by me (Niklas Mellgren) as part of the final project.
