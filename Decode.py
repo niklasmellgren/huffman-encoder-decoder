@@ -1,9 +1,3 @@
-'''
-Group: Niklas Mellgren
-SDU-login: nimel11
-'''
-
-
 import sys
 import bitIO
 import Encode
