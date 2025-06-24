@@ -56,7 +56,6 @@ def decode_file(input_filename, output_filename):
         print(f"File '{input_filename}' not found.")
         sys.exit(1)
 
-
 if __name__ == "__main__": 
     # Ensures the script is called with exactly two arguments (input and output filenames)
     if len(sys.argv) != 3:
