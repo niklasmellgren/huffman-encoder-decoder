@@ -1,20 +1,16 @@
 import sys
 
-
 def parent(i):
     """Calculates the parent index of a given index in a heap."""
     return (i - 1) // 2
-
 
 def left(i):
     """Calculates the left child index of a given index in a heap."""
     return 2 * i + 1
 
-
 def right(i):
     """Calculates the right child index of a given index in a heap."""
     return 2 * i + 2
-
 
 def min_heapify(A, i):
     """
@@ -36,7 +32,6 @@ def min_heapify(A, i):
         else:
             break
 
-
 def extractMin(A):
     """
     Removes and returns the minimum element from the heap.
@@ -56,7 +51,6 @@ def extractMin(A):
         min_heapify(A, 0)
     return min_element
 
-
 def insert(A, key):
     """Inserts a new element into the heap."""
     A.append(key)
@@ -65,11 +59,9 @@ def insert(A, key):
         A[i], A[parent(i)] = A[parent(i)], A[i]
         i = parent(i)
 
-
 def createEmptyPQ():
     """Returns a new, empty priority queue."""
     return []
-
 
 def main():
     """
@@ -105,7 +97,6 @@ def main():
         print("Extracted in order:")
         while A:
             print(extractMin(A))
-
 
 if __name__ == "__main__":
     main()
