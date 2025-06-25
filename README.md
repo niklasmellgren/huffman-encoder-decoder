@@ -131,5 +131,5 @@ After decompression, `DolphinSunset_decoded.jpg` will be identical to the origin
 
 This project was created as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
 
-- `bitIO.py` and `Element.py` were provided by **Professor Rolf Fagerberg** and are used without modifications.
-- All other files and the overall implementation were written by **Niklas Mellgren** as part of the final project.
+- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are used without modifications.
+- All other files and the overall implementation were written by me (Niklas Mellgren) as part of the final project.
