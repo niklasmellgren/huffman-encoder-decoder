@@ -66,13 +66,20 @@ This reduces the total number of bits in the file → that’s the compression!
 
 ## How the Priority Queue (Min-Heap) Works
 
-To build the Huffman tree, we need to **efficiently fetch the two least frequent symbols**. A **min-heap** is perfect for this.
+To build the Huffman tree, we need to repeatedly fetch the two least frequent symbols. A **min-heap** is ideal for this task because it efficiently keeps track of the smallest elements.
 
-- A **min-heap** is a binary tree where the **smallest item is always on top**.
-- It's often implemented as a list (array) and allows:
-  - **Insert** in `O(log n)`
-  - **Extract minimum** in `O(log n)`
-- It keeps the smallest items bubbling up automatically.
+A **min-heap** is a binary tree where the **smallest item is always at the root**.  
+In this project, the min-heap is implemented as a list, where index math is used to simulate parent-child relationships:
+
+- **Left child** of index `i` → `2 * i + 1`  
+- **Right child** of index `i` → `2 * i + 2`  
+- **Parent** of index `i` → `(i - 1) // 2`
+
+It supports:
+- **Insertions** in `O(log n)`
+- **Extracting the minimum** in `O(log n)`
+
+The heap automatically reorders itself so that the smallest item “bubbles up” to the top after each operation.
 
 ---
 
