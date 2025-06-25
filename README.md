@@ -1,4 +1,4 @@
-# Huffman File Compressor in Python
+# Huffman File Compressor
 
 This project is a Python implementation of **Huffman coding**, a classic algorithm for compressing data without losing any information (lossless compression). It can compress and decompress all kinds of files — text, images, even DNA files.
 
