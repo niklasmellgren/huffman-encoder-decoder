@@ -11,7 +11,7 @@ The project showcases:
 
 ## What It Does
 
-You give the encoder a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Later, it can decompress that `.huf` file back into the exact original using the decoder.
+You give the encoder a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Then, we can decompress that `.huf` file back into the exact original using the decoder.
 
 ## Why It Works: The Huffman Trick
 
