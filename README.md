@@ -27,7 +27,7 @@ Instead of storing all bytes using 8 bits each (which is the default), Huffman c
 | `z`  | very rare | `111001`     |
 
 So:
-- `e` appears thousands of times → uses just **1 bit**
+- `e` appears thousands of times → uses just 1 bit
 - `z` is rare → takes 6 bits, but that’s fine because it barely shows up
 
 This reduces the total number of bits in the file → that’s the compression!
@@ -60,7 +60,7 @@ This reduces the total number of bits in the file → that’s the compression!
 | `Decode.py`    | Main decoder. Restores the original file from a `.huf` file. |
 | `bitIO.py`     | Reads/writes individual bits and 32-bit integers. |
 | `Element.py`   | Helper class for managing nodes in the priority queue. |
-| `PQHeap.py`    | Custom **priority queue (min-heap)** used to build the Huffman tree. |
+| `PQHeap.py`    | Custom priority queue (min-heap) used to build the Huffman tree. |
 
 ---
 
