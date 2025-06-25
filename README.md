@@ -13,10 +13,24 @@ The project showcases:
 
 You give it a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Later, it can decompress that `.huf` file back into the exact original.
 
-### Why it works:
-- Frequently used bytes get **short binary codes**
-- Rare bytes get **longer codes**
-- The result: fewer total bits used overall
+## Why It Works: The Huffman Trick
+
+Instead of storing all bytes using 8 bits each (which is the default), Huffman coding assigns **shorter binary codes to frequently used bytes**, and **longer codes to rare ones**.
+
+### Example:
+
+| Byte | Frequency | Huffman Code |
+|------|-----------|--------------|
+| `e`  | very high | `0`          |
+| `t`  | high      | `10`         |
+| `x`  | rare      | `11010`      |
+| `z`  | very rare | `111001`     |
+
+So:
+- `e` appears thousands of times → uses just **1 bit**
+- `z` is rare → takes 6 bits, but that’s fine because it barely shows up
+
+This reduces the total number of bits in the file → that’s the compression!
 
 ---
 
@@ -46,9 +60,19 @@ You give it a file (e.g., a `.txt` or `.jpg`), and it compresses it into a small
 | `Decode.py`    | Main decoder. Restores the original file from a `.huf` file. |
 | `bitIO.py`     | Reads/writes individual bits and 32-bit integers. |
 | `Element.py`   | Helper class for managing nodes in the priority queue. |
-| `PQHeap.py`    | Your custom **priority queue (min-heap)** used to build the Huffman tree. |
+| `PQHeap.py`    | Custom **priority queue (min-heap)** used to build the Huffman tree. |
 
 ---
+
+## How the Priority Queue (Min-Heap) Works
+
+To build the Huffman tree, we need to **efficiently fetch the two least frequent symbols**. A **min-heap** is perfect for this.
+
+- A **min-heap** is a binary tree where the **smallest item is always on top**.
+- It's often implemented as a list (array) and allows:
+  - **Insert** in `O(log n)`
+  - **Extract minimum** in `O(log n)`
+- It keeps the smallest items bubbling up automatically.
 
 ## How to Use It
 
