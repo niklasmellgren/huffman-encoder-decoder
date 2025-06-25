@@ -1,70 +1,102 @@
 # Huffman File Compressor in Python
 
-This repository contains a custom implementation of **Huffman coding** to compress and decompress binary files. The project demonstrates bit-level I/O handling, priority queues, and tree-based encoding for efficient lossless data compression.
+This project is a Python implementation of **Huffman coding**, a classic algorithm for compressing data without losing any information (lossless compression). It can compress and decompress all kinds of files — text, images, even DNA files.
 
-## Overview
+The project showcases:
+- How to read and write individual **bits** (not just bytes)
+- How to use a **priority queue** (min-heap) to build a Huffman tree
+- How to implement your own file compression tool from scratch
 
-Two programs are included:
-- `Encode.py` – Compresses a file using Huffman coding.
-- `Decode.py` – Decompresses a previously compressed file.
+---
 
-Compression is performed by:
-1. Scanning the input file to build a frequency table of bytes.
-2. Constructing a Huffman tree from the table.
-3. Generating Huffman codes via a recursive traversal.
-4. Writing the frequency table and the encoded bitstream to the output.
+## What It Does
 
-Decompression reconstructs the original file by:
-1. Reading the stored frequency table.
-2. Rebuilding the same Huffman tree.
-3. Reading bits from the file and traversing the tree to decode bytes.
+You give it a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Later, it can decompress that `.huf` file back into the exact original.
 
-## File Descriptions
+### Why it works:
+- Frequently used bytes get **short binary codes**
+- Rare bytes get **longer codes**
+- The result: fewer total bits used overall
 
-| File           | Description |
-|----------------|-------------|
-| `Encode.py`    | Main encoder that builds a frequency table and compresses files using Huffman coding. |
-| `Decode.py`    | Main decoder that reconstructs original data from a Huffman-compressed file. |
-| `bitIO.py`     | Custom bit-level I/O utilities for reading/writing individual bits and 32-bit integers. |
-| `Element.py`   | A small wrapper class with total ordering, used in the priority queue. |
-| `PQHeap.py`    | A min-heap priority queue implementation used to construct the Huffman tree. |
+---
 
-## Usage
+## How It Works
 
-### Encode
+### Encoding (Compressing a File)
+1. Count how many times each byte appears in the file.
+2. Build a Huffman tree using a priority queue.
+3. Assign a binary code to each byte based on the tree.
+4. Replace all the bytes in the file with their binary codes.
+5. Write everything into a `.huf` file:
+   - Frequency table (for decoding)
+   - Encoded bits
+
+### Decoding (Decompressing a File)
+1. Read the frequency table from the `.huf` file.
+2. Rebuild the same Huffman tree.
+3. Read the bitstream and decode it back to the original bytes.
+
+---
+
+## File Overview
+
+| File           | Purpose |
+|----------------|---------|
+| `Encode.py`    | Main encoder. Compresses any file using Huffman coding. |
+| `Decode.py`    | Main decoder. Restores the original file from a `.huf` file. |
+| `bitIO.py`     | Reads/writes individual bits and 32-bit integers. |
+| `Element.py`   | Helper class for managing nodes in the priority queue. |
+| `PQHeap.py`    | Your custom **priority queue (min-heap)** used to build the Huffman tree. |
+
+---
+
+## How to Use It
+
+### Compress a file
 ```bash
 python Encode.py inputfile.txt outputfile.huf
 ```
 
-### Decode
+### Decompress the file
 ```bash
 python Decode.py outputfile.huf decodedfile.txt
 ```
 
-### Example
+---
 
-You can try the tool using the included sample file `testfiles/DolphinSunset.jpg`:
+## Example
+
+Try it with a test file in the `testfiles/` folder:
 
 ```bash
-# Compress the file
+# Compress an image
 python Encode.py testfiles/DolphinSunset.jpg testfiles/DolphinSunset.huf
-```
 
-```bash
-# Decompress it
+# Decompress the result
 python Decode.py testfiles/DolphinSunset.huf testfiles/DolphinSunset_decoded.jpg
 ```
 
-All files must be opened in **binary mode**, and the encoded file will contain:
-1. 256 integers (32-bit each) representing byte frequencies.
-2. The bit-encoded body of the original file.
+After decompression, `DolphinSunset_decoded.jpg` will be identical to the original file.
+
+---
 
 ## Notes
 
-- Works on all file types: `.txt`, `.jpg`, `.pdf`, etc.
-- Optimized for clarity, modularity, and correct handling of corner cases (e.g., empty files or single-byte files).
+- Supports all file types: `.txt`, `.jpg`, `.pdf`, `.dna`, etc.
+- Handles edge cases like:
+  - Empty files
+  - Files with only one unique byte
+- Useful for learning about:
+  - Binary trees
+  - Greedy algorithms
+  - Heap-based data structures
+  - Bitwise file I/O in Python
+
+---
 
 ## Acknowledgments
-This project was built as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
-- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are included without modifications.
-- The remaining files and implementation were written by me (Niklas Mellgren) as part of the final project.
+
+This project was created as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
+
+- `bitIO.py` and `Element.py` were provided by **Professor Rolf Fagerberg** and are used without modifications.
+- All other files and the overall implementation were written by **Niklas Mellgren** as part of the final project.
