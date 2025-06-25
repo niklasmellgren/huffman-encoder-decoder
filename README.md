@@ -62,6 +62,10 @@ This reduces the total number of bits in the file → that’s the compression!
 | `Element.py`   | Helper class for managing nodes in the priority queue. |
 | `PQHeap.py`    | Custom priority queue (min-heap) used to build the Huffman tree. |
 
+This project was created as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
+
+- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are used without modifications.
+- All other files and the overall implementation is done by me (Niklas Mellgren).
 ---
 
 ## How the Priority Queue (Min-Heap) Works
@@ -126,10 +130,3 @@ After decompression, `DolphinSunset_decoded.jpg` will be identical to the origin
   - Bitwise file I/O in Python
 
 ---
-
-## Acknowledgments
-
-This project was created as part of the *DM507/DS814 Algorithms and Data Structures* course at the University of Southern Denmark.
-
-- `bitIO.py` and `Element.py` were provided by Professor Rolf Fagerberg and are used without modifications.
-- All other files and the overall implementation is done by me (Niklas Mellgren).
