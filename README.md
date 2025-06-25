@@ -123,10 +123,5 @@ After decompression, `DolphinSunset_decoded.jpg` will be identical to the origin
 - Handles edge cases like:
   - Empty files
   - Files with only one unique byte
-- Useful for learning about:
-  - Binary trees
-  - Greedy algorithms
-  - Heap-based data structures
-  - Bitwise file I/O in Python
 
 ---
