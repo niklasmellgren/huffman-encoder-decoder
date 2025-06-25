@@ -74,6 +74,8 @@ To build the Huffman tree, we need to **efficiently fetch the two least frequent
   - **Extract minimum** in `O(log n)`
 - It keeps the smallest items bubbling up automatically.
 
+---
+
 ## How to Use It
 
 ### Compress a file
