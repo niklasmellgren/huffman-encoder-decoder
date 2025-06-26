@@ -13,7 +13,7 @@ The project showcases:
 
 You give the encoder a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Then, we can decompress that `.huf` file back into the exact original using the decoder.
 
-## Why It Works: The Huffman Trick
+## Why It Works
 
 Instead of storing all bytes using 8 bits each (which is the default), Huffman coding assigns **shorter binary codes to frequently used bytes**, and **longer codes to rare ones**.
 
