@@ -1,6 +1,6 @@
 # Huffman File Compressor
 
-This project is a Python implementation of **Huffman coding**, a classic algorithm for compressing data without losing any information (lossless compression). It can compress and decompress all kinds of files — text, images, even DNA files.
+This project is a Python implementation of **Huffman coding**, a classic algorithm for compressing data without losing any information (lossless compression). It can compress and decompress any files — text, images, even DNA files.
 
 The project showcases:
 - How to read and write individual **bits** (not just bytes)
@@ -9,32 +9,8 @@ The project showcases:
 
 ---
 
-## What It Does
-
-You give the encoder a file (e.g., a `.txt` or `.jpg`), and it compresses it into a smaller `.huf` file using Huffman coding. Then, we can decompress that `.huf` file back into the exact original using the decoder.
-
-## Why It Works
-
-Instead of storing all bytes using 8 bits each (which is the default), Huffman coding assigns **shorter binary codes to frequently used bytes**, and **longer codes to rare ones**.
-
-### Example:
-
-| Byte | Frequency | Huffman Code |
-|------|-----------|--------------|
-| `e`  | very high | `0`          |
-| `t`  | high      | `10`         |
-| `x`  | rare      | `11010`      |
-| `z`  | very rare | `111001`     |
-
-So:
-- `e` appears thousands of times → uses just 1 bit
-- `z` is rare → takes 6 bits, but that’s fine because it barely shows up
-
-This reduces the total number of bits in the file → that’s the compression!
-
----
-
 ## How It Works
+Huffman coding assigns shorter binary codes to frequent bytes and longer ones to rare bytes, reducing the overall file size.
 
 ### Encoding (Compressing a File)
 1. Count how many times each byte appears in the file.
