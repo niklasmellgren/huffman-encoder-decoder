@@ -3,8 +3,8 @@
 This project is a Python implementation of Huffman coding, a classic algorithm for compressing data without losing any information (lossless compression). It can compress and decompress any files - text, images, even DNA files.
 
 The project showcases:
-- How to read and write individual **bits** (not just bytes)
-- How to use a **priority queue** (min-heap) to build a Huffman tree
+- How to read and write individual bits (not just bytes)
+- How to use a priority queue (min-heap) to build a Huffman tree
 - How to implement your own file compression tool from scratch
 
 ---
@@ -46,9 +46,9 @@ This project was created as part of the *DM507/DS814 Algorithms and Data Structu
 
 ## How the Priority Queue (Min-Heap) Works
 
-To build the Huffman tree, we need to repeatedly fetch the two least frequent symbols. A **min-heap** is ideal for this task because it efficiently keeps track of the smallest elements.
+To build the Huffman tree, we need to repeatedly fetch the two least frequent symbols. A min-heap is ideal for this task because it efficiently keeps track of the smallest elements.
 
-A **min-heap** is a binary tree where the **smallest item is always at the root**.  
+A **min-heap** is a binary tree where the smallest item is always at the root.  
 In this project, the min-heap is implemented as a list, where index math is used to simulate parent-child relationships:
 
 - **Left child** of index `i` → `2 * i + 1`  
