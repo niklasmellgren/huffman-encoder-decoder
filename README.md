@@ -3,7 +3,7 @@
 This project is a Python implementation of Huffman coding, an algorithm for compressing data without losing any information (lossless compression). It can compress and decompress any files - text, images, even DNA files.
 
 The project showcases:
-- How to read and write individual bits (not just bytes)
+- How to read and write individual bits
 - How to use a priority queue (min-heap) to build a Huffman tree
 - How to implement your own file compression tool from scratch
 
